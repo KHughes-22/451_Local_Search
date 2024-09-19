@@ -11,7 +11,7 @@ param int queens: the max number that the chrom can be. The crosspoint is random
 return: returns two strings that have been mutated together at the crosspoint
 """
 def cross(str1, str2, queens):
-    crosspoint = random.randrange(1,queens)
+    crosspoint = random.randrange(1,queens - 1)
     return str1[:crosspoint] + str2[crosspoint:], str2[:crosspoint] + str1[crosspoint:]
 
 
@@ -62,10 +62,8 @@ def main():
                 print(i)
                 break
     print(pair)
-    pairs = len(pair) / 2
-    print(pairs)
-    for i in range(pairs):
-        pair[i], pair[i + 1] = cross(pair[0], pair[1], queens)
+    for i in range(0,len(pair),2):
+        pair[i], pair[i + 1] = cross(pair[i], pair[i + 1], queens)
     print(pair)
 
     

@@ -1,7 +1,11 @@
 import board
 
 def main():
-    print("hello")
+    queens = 4
+
+    b = board.Board(queens)
+
+    b.print_map()
 
 
 if __name__ == "__main__":
