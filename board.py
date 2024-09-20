@@ -53,6 +53,9 @@ class Board:
         self.reset()
         for i in range (self.n_queen):
             self.map[i][int(code[i])] = 1
+    
+    def getQueens(slef):
+        return self.queen
 
 
 if __name__ == '__main__':
